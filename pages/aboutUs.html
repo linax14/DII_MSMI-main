@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/aboutUs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <img src="../assets/logo.svg" alt="website logo" id="logo">
+        <span><i class="fa-solid fa-bars" id="hamburger"></i>
+            <div id="hamburgerList">
+                <a href="home.html" class="navbar">HOME</a>
+                <a href="aboutUs.html" class="navbar">ABOUT US</a>
+                <a href="curriculum.html" class="navbar">CURRICULUM</a>
+                <a href="gallery.html" class="navbar">GALLERY</a>
+                <a href="admissions.html" class="navbar">ADMISSIONS</a>
+                <a href="alumni.html" class="navbar">ALUMNI</a>
+                <a href="contactUs.html" class="navbar">CONTACT US</a>
+            </div>
+        </span>
+        <span id="menu">
+            <a href="home.html" class="navbar">HOME</a>
+            <a href="aboutUs.html" class="navbar">ABOUT US</a>
+            <a href="curriculum.html" class="navbar">CURRICULUM</a>
+            <a href="gallery.html" class="navbar">GALLERY</a>
+            <a href="admissions.html" class="navbar">ADMISSIONS</a>
+            <a href="alumni.html" class="navbar">ALUMNI</a>
+            <a href="contactUs.html" class="navbar">CONTACT US</a>
+        </span>
+        
+    </nav>
+
+    <div class="row">
+        <img src="../assets/esmad.svg" alt="picture of school" id="school">
+        <div id="presentation">
+            <h1 id="title">WELCOME TO YOUR NEW HOME</h1>
+            <h3>WELCOME TO <span id="esmad">ESMAD</span></h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <p class="justify"> The School of Media Arts and Design (ESMAD) at Polytechnic of Porto (P.PORTO) positions
+            itself as a national and international benchmark in training competitive, creative, and innovative
+            professionals in the fields of Cinema, Design, Photography, Multimedia, and Web. As a cross-disciplinary
+            project in the realms of Media Arts and Design, it aims to provide highly qualified professionals, foster
+            the development of systematic skills, and instill artistic awareness in the following domains: audiovisual,
+            photography, cinema, graphic design, industrial design, multimedia, digital games, and web technologies. We
+            blend strong technical competencies with an artistic vocation of an authorial profile.
+            With a lab-oriented educational approach strongly focused on employability, we invest in training
+            environments conducive to innovation, creativity, and excellence. We promote multidisciplinarity,
+            collaboration, and teamwork. Located on Campus 2 of Polytechnic of Porto, our facilities boast quality
+            spaces and excellent equipment.</p>
+        <div id="location">
+            <h4><i class="fa-solid fa-location-dot" id="locIcon"></i>VISIT US</h4>
+            <p>Rua D. Sancho I, n.º 981 4480-876</p>
+            <p>Vila do Conde, Portugal</p>
+        </div>
+    </div>
+
+    <h4 id="about">ABOUT INTERACTIVE SYSTEMS AND MEDIA</h4>
+    <div class="row">
+        <div class="justify" id="intro">
+            <p>The Master's program combines a strong technological component with a high artistic capacity in the
+                process of conceiving and creating products, experiences, and systems with varying degrees of
+                interactivity. This program aims to address and explore the opportunities provided by new technologies
+                and digital media. The Master's degree aims to equip students with theoretical and practical knowledge
+                applied to web development and digital platform design, the creation of interactive environments for
+                virtual/augmented reality, video games, or interactive installations, as well as the production of
+                digital animation and motion graphics for interactive contexts, videomapping, or performances.</p>
+            <br>
+            <p><b>Learn while you work!</b></p>
+            <p>Our schedules are after work hours, usually Tue-Thur 6PM-11PM, depending on the days.</p>
+        </div>
+        <a id="button" href="curriculum.html">
+            <p id="CTA">Click here to see our curriculum <i class="fa-solid fa-arrow-right"></i></p>
+        </a>
+    </div>
+    <footer>
+        <div class="footer">
+            <div>
+                <a href="https://www.linkedin.com/groups/9512647/" class="icons"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/groups/9512647/" class="icons"><i
+                        class="fa-brands fa-square-facebook"></i></i></a>
+                <a href="https://www.instagram.com/esmad_pporto/" class="icons"><i
+                        class="fa-brands fa-square-instagram"></i></a>
+            </div>
+
+            <div>
+                <p>Master's Degree - Interactive Systems and Media</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let menu = document.querySelector("#hamburger")
+                
+            menu.addEventListener("click", function(){
+                if(menu.classList.toggle("active")){
+                    menu.classList.remove("active")
+                }else{
+                    menu.classList.toggle("active")
+                }
+                
+                let list = menu.nextElementSibling
+                
+                if(list.style.display == "flex"){
+                    list.style.display = "none"
+
+                }else{
+                    list.style.display = "flex"
+                }
+
+            })
+        })
+
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Gallery</title>
+</head>
+
+<body>
+    <nav>
+        <img src="../assets/logo.svg" alt="website logo" id="logo">
+        <span><i class="fa-solid fa-bars" id="hamburger"></i>
+            <div id="hamburgerList">
+                <a href="home.html" class="navbar">HOME</a>
+                <a href="aboutUs.html" class="navbar">ABOUT US</a>
+                <a href="curriculum.html" class="navbar">CURRICULUM</a>
+                <a href="gallery.html" class="navbar">GALLERY</a>
+                <a href="admissions.html" class="navbar">ADMISSIONS</a>
+                <a href="alumni.html" class="navbar">ALUMNI</a>
+                <a href="contactUs.html" class="navbar">CONTACT US</a>
+            </div>
+        </span>
+        <span id="menu">
+            <a href="home.html" class="navbar">HOME</a>
+            <a href="aboutUs.html" class="navbar">ABOUT US</a>
+            <a href="curriculum.html" class="navbar">CURRICULUM</a>
+            <a href="gallery.html" class="navbar">GALLERY</a>
+            <a href="admissions.html" class="navbar">ADMISSIONS</a>
+            <a href="alumni.html" class="navbar">ALUMNI</a>
+            <a href="contactUs.html" class="navbar">CONTACT US</a>
+        </span>
+    </nav>
+
+    <div id="gallery">
+        <h1 id="gallery-word">gallery</h1>
+        <h3 id="gallery-text">Welcome to the captivating world of innovation and creativity showcased in the gallery of projects
+            from previous students of Interactive Systems and Media.</h3>
+    </div>
+
+        <div class="video-box">
+            <figure>
+                <iframe width="640" height="360" frameborder="0"
+                    src="https://mega.nz/embed/EENG1DKT#PIldWZKW0uh0zGy53WKLTU2bk2bByEg8TiLgLRQt9fA"
+                    allowfullscreen></iframe>
+                <figcaption>
+                    <p class="project-name">Mobile Application with Augmented Reality for Tourism</p>
+                    <p class="student-name">Ana Silva</p>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <iframe controls width="640" height="360" frameborder="0"
+                    src="https://mega.nz/embed/1dViBS6Y#iG1dJGTELMCnUpub9N7_UUwxkVagsTaAbIKMf3N5AyQ"
+                    allowfullscreen></iframe>
+                <figcaption>
+                    <p class="project-name">Expanded Synesthesia: Multisensory Aromatic Experience in Virtual Reality
+                    </p>
+                    <p class="student-name">Jorge Barros</p>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <iframe width="640" height="360" frameborder="0"
+                    src="https://mega.nz/embed/4JNT3KQK#un53VuTtKZyFFjq3ELhDCUadLaICvxzorkcXTVNXt5M"
+                    allowfullscreen></iframe>
+                <figcaption>
+                    <p class="project-name">Interative book AR: "My monster friends"</p>
+                    <p class="student-name">Andreia Fernandes</p>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <iframe width="640" height="360" frameborder="0"
+                    src="https://mega.nz/embed/EFFSlKgQ#4wybRqXZR4RbEtCtui231Q_irf3O3wIyPXrKHyDhW3A"
+                    allowfullscreen></iframe>
+                <figcaption>
+                    <p class="project-name">virtual room surgery</p>
+                    <p class="student-name">Andre Macedo</p>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <iframe width="640" height="360" frameborder="0"
+                    src="https://mega.nz/embed/ZNsmRR6D#8ITZiO3jbTZ-2v7Bz7EG5DVd-D8XBoylDVc8AVEQBqc"
+                    allowfullscreen></iframe>
+                <figcaption>
+                    <p class="project-name">educational game with augmented reality application</p>
+                    <p class="student-name">Catarina Marinho</p>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <iframe width="640" height="360" frameborder="0"
+                    src="https://mega.nz/embed/hAVWnTqD#w83gwPTLU6vCVac01qojqHh136_4AgJtupF4hplkXQ0"
+                    allowfullscreen></iframe>
+                <figcaption>
+                    <p class="project-name">color and movement as a means of communicating emotions</p>
+                    <p class="student-name">Sara Goncalves</p>
+                </figcaption>
+            </figure>
+        </div>
+
+    <footer>
+        <div class="footer">
+            <div>
+                <a href="https://www.linkedin.com/groups/9512647/" class="icons"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/groups/9512647/" class="icons"><i
+                        class="fa-brands fa-square-facebook"></i></i></a>
+                <a href="https://www.instagram.com/esmad_pporto/" class="icons"><i
+                        class="fa-brands fa-square-instagram"></i></a>
+            </div>
+
+            <div>
+                <p>Master's Degree - Interactive Systems and Media</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let menu = document.querySelector("#hamburger")
+                
+            menu.addEventListener("click", function(){
+                if(menu.classList.toggle("active")){
+                    menu.classList.remove("active")
+                }else{
+                    menu.classList.toggle("active")
+                }
+                
+                let list = menu.nextElementSibling
+                
+                if(list.style.display == "flex"){
+                    list.style.display = "none"
+
+                }else{
+                    list.style.display = "flex"
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

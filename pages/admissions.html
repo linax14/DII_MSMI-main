@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/admissions.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <img src="../assets/logo.svg" alt="website logo" id="logo">
+        <span><i class="fa-solid fa-bars" id="hamburger"></i>
+            <div id="hamburgerList">
+                <a href="home.html" class="navbar">HOME</a>
+                <a href="aboutUs.html" class="navbar">ABOUT US</a>
+                <a href="curriculum.html" class="navbar">CURRICULUM</a>
+                <a href="gallery.html" class="navbar">GALLERY</a>
+                <a href="admissions.html" class="navbar">ADMISSIONS</a>
+                <a href="alumni.html" class="navbar">ALUMNI</a>
+                <a href="contactUs.html" class="navbar">CONTACT US</a>
+            </div>
+        </span>
+        <span id="menu">
+            <a href="home.html" class="navbar">HOME</a>
+            <a href="aboutUs.html" class="navbar">ABOUT US</a>
+            <a href="curriculum.html" class="navbar">CURRICULUM</a>
+            <a href="gallery.html" class="navbar">GALLERY</a>
+            <a href="admissions.html" class="navbar">ADMISSIONS</a>
+            <a href="alumni.html" class="navbar">ALUMNI</a>
+            <a href="contactUs.html" class="navbar">CONTACT US</a>
+        </span>
+        
+    </nav>
+    <div class="container">
+        <div id="left">
+            <h1>FAQ's</h1>
+            <div id="faqs">
+                <h3 class="question">1. How can I apply for the Master's in Interactive Systems and Media? <i
+                        class="fa-solid fa-chevron-down" id="arrow"></i></h3>
+                <p class="answer">You can apply online through our application portal. Make sure to follow all the
+                    instructions provided in the application process.</p>
+                <h3 class="question">2. What are the admission requirements for the program? <i
+                        class="fa-solid fa-chevron-down" id="arrow"></i></h3>
+                <p class="answer">Admission requirements include a bachelor's degree in a related field, submission of
+                    academic documents such as transcripts and letters of motivation.</p>
+                <h3 class="question">3. What documents are required for the application? <i
+                        class="fa-solid fa-chevron-down" id="arrow"></i></h3>
+                <p class="answer">Typical required documents include academic certificates, citizen documentation, a
+                    resume, letters of motivation, and possibly a portfolio of previous work related to interactive
+                    systems and media.</p>
+                <h3 class="question">4. Is there a deadline for submitting the application? <i
+                        class="fa-solid fa-chevron-down" id="arrow"></i></h3>
+                <p class="answer">Yes, it is crucial to adhere to the application deadlines. They are stated on this
+                    website.</p>
+                <h3 class="question">5. Is prior experience in programming or design necessary for admission to the
+                    Master's in Interactive Systems and Media? <i class="fa-solid fa-chevron-down" id="arrow"></i></h3>
+                <p class="answer">While prior experience is valued, it is not mandatory. The program is designed for
+                    students with diverse backgrounds. We provide opportunities to develop technical skills during the
+                    course.</p>
+            </div>
+
+        </div>
+        <div id="right">
+            <div>
+                <h1><i class="fa-solid fa-triangle-exclamation" id="importantIcon"></i> DATES</h1>
+                <p><b>Phase 1:</b> 25th may - 30th june</p>
+                <p><b>Phase 2:</b> 02nd - 25th august</p>
+                <p><b>Phase 3:</b> 26th september - 06th october</p>
+                <a id="admission"><button id="apply" class="disabled">Apply now</button></a>
+                <p><b>Time left to open admissions:</b></p>
+                <p id="timeLeft"></p>
+            </div>
+            <a href="contactUs.html"><button id="contact">Need more informations? Contact us!</button></a>
+
+        </div>
+
+    </div>
+    <footer>
+        <div class="footer">
+            <div>
+                <a href="https://www.linkedin.com/groups/9512647/" class="icons"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/groups/9512647/" class="icons"><i
+                        class="fa-brands fa-square-facebook"></i></i></a>
+                <a href="https://www.instagram.com/esmad_pporto/" class="icons"><i
+                        class="fa-brands fa-square-instagram"></i></a>
+            </div>
+
+            <div>
+                <p>Master's Degree - Interactive Systems and Media</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        setInterval(function () {
+            let finalDate = new Date("2024-05-25");
+            let currentDate = new Date()
+
+            let dif = finalDate - currentDate
+
+            let days = Math.floor(dif / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((dif % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+            let min = Math.floor((dif % (1000 * 60 * 60)) / (1000 * 60));
+            let sec = Math.floor((dif % (1000 * 60)) / 1000);
+
+
+            if (dif <= 0) {
+                document.querySelector("#apply").className = "button"
+                document.querySelector("#timeLeft").innerHTML = `Admissions open`
+                document.querySelector("#admission").href = "https://domus.ipp.pt/home/cands/candidato/login.aspx"
+            } else {
+                document.querySelector("#apply").className = "disabled"
+                document.querySelector("#timeLeft").innerHTML = `${days} days ${hours} h ${min} min ${sec} sec`
+            }
+
+        }, 1000)
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let questions = document.querySelectorAll(".question")
+            for (let i = 0; i < questions.length; i++) {
+                questions[i].addEventListener("click", function () {
+                    if (questions[i].classList.toggle("active")) {
+                        questions[i].classList.remove("active")
+                    } else {
+                        questions[i].classList.toggle("active")
+                    }
+
+                    let answer = questions[i].nextElementSibling
+                    if (answer.style.display == "block") {
+                        answer.style.display = "none"
+                    } else {
+                        answer.style.display = "block"
+                    }
+                })
+            }
+
+            let menu = document.querySelector("#hamburger")
+                
+            menu.addEventListener("click", function(){
+                if(menu.classList.toggle("active")){
+                    menu.classList.remove("active")
+                }else{
+                    menu.classList.toggle("active")
+                }
+                
+                let list = menu.nextElementSibling
+                
+                if(list.style.display == "flex"){
+                    list.style.display = "none"
+
+                }else{
+                    list.style.display = "flex"
+                }
+
+            })
+            
+
+        })
+
+
+    </script>
+</body>
+
+</html>

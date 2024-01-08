@@ -1,0 +1,191 @@
+body{
+    background-color: #333533;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* navbar style */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #333533;
+    padding-top: 2vh;
+    border-bottom-style: solid;
+    border-width: 0.5px;
+    position: sticky;
+    top: 0px;
+
+}
+
+#menu{
+    display: block;
+}
+
+#hamburger{
+    display: none;
+}
+
+#hamburgerList{
+    display: none;
+}
+
+#logo{
+    width: 5vw;
+    height: 3vh;
+    margin-bottom: 3vh;
+}
+
+a.navbar{
+    color: white;
+    text-decoration: none;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+
+a.navbar:hover{
+    color: #BA4E26
+}
+
+a.navbar:after{
+    color: white;
+    text-decoration: none;
+}
+
+h2{
+    margin: 5vh;
+}
+
+#container{
+    background-color: white;
+    background-image: url("../assets/arcos.svg");
+    background-position: center;
+    background-size: cover;
+    width: 75%;
+    height: 60vh;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: #333533;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+#notification{
+    background-color: #BA4E26;
+    justify-items: center;
+    margin: auto;
+    color: white;
+    border: 10px;
+}
+
+#form{
+    color: #333533;
+    padding: 6vh;
+}
+
+input{
+    margin-bottom: 2vh;
+    border: 1px solid #BA4E26;
+    border-radius: 5px;
+    height: 2vh;
+}
+
+textarea{
+    border: 1px solid #BA4E26;
+    border-radius: 5px;
+}
+
+button{
+    background-color: #BA4E26;
+    color: white;
+    border-radius: 10px;
+    height: 5vh;
+    width: 15vw;
+    border: none;
+    margin-top: 1%;
+}
+
+button:hover{
+    background-color: #953c1b;
+    color: white;
+    border-radius: 10px;
+    height: 5vh;
+    width: 15vw;
+    border: none;
+}
+
+span{
+    color: #BA4E26;
+    margin-top: 1%;
+}
+
+#phone{
+    color: #BA4E26;
+    margin-right: 1vh;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 2vh;
+    border-top-style: solid;
+    border-width: 0.5px;
+}
+
+a.icons{
+    color:#999795;
+    font-size: 24px;
+    padding: 1vh;
+}
+
+a.icons:after{
+    color:#999795;
+    font-size: 24px;
+    padding: 1vh;
+}
+
+@media(max-width:700px){
+    #form{
+        padding: 4vh;
+    }
+    textarea{
+        width: 25vh;
+        height: 25vh;
+    }
+
+    #container{
+        flex-direction: column;
+        height: 80vh;
+    }
+
+    #notification{
+        margin-left: 4vw;
+    }
+
+    #menu{
+        display: none;
+    }
+
+    #hamburger{
+        display: flex;
+    }
+
+    #hamburgerList{
+        display: none;
+    }
+
+    #hamburgerList{
+        flex-direction: column;
+        background-color: #333533;
+        position: absolute;
+        right: 0px;
+        top: 10vh;
+        font-size: x-large;
+        width: 100%;
+        line-height: 1.4;
+    }
+}

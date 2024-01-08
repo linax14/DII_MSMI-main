@@ -1,0 +1,182 @@
+body{
+    background-color: #333533;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* navbar style */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #333533;
+    padding-top: 2vh;
+    border-bottom-style: solid;
+    border-width: 0.5px;
+    position: sticky;
+    top: 0px;
+}
+
+#menu{
+    display: block;
+}
+
+#hamburger{
+    display: none;
+}
+
+#hamburgerList{
+    display: none;
+}
+
+#logo{
+    width: 5vw;
+    height: 3vh;
+    margin-bottom: 3vh;
+}
+
+a.navbar{
+    color: white;
+    text-decoration: none;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+
+a.navbar:hover{
+    color: #BA4E26
+}
+
+a.navbar:after{
+    color: white;
+    text-decoration: none;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5vh;
+    padding: 5vw;
+}
+
+#left{
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+#right{
+    margin: 2vw;
+    background-color: white;
+    padding: 2vw;
+    color: #333533;
+    height: min-content;
+}
+
+button{
+    background-color: #BA4E26;
+    color: white;
+    border-radius: 10px;
+    height: 5vh;
+    width: 15vw;
+    border: none;
+}
+
+button:hover{
+    background-color: #953c1b;
+    color: white;
+    border-radius: 10px;
+    height: 5vh;
+    width: 15vw;
+    border: none;
+}
+
+#importantIcon{
+    color: #BA4E26;
+}
+
+.disabled{
+    background-color: #68544c;
+}
+
+.disabled:hover{
+    background-color: #68544c;
+}
+
+.answer{
+    display: none;
+    margin: 4vh 0vw 4vh 2vw;
+}
+
+#faqs{
+    padding: 1vw;
+}
+
+#arrow{
+    color: #BA4E26;
+}
+
+#arrow:hover{
+    color: #953c1b;
+    
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 2vh;
+    border-top-style: solid;
+    border-width: 0.5px;
+}
+
+a.icons{
+    color:#999795; 
+    font-size: 24px;
+    padding: 1vh;
+}
+
+a.icons:after{
+    color:#999795;
+    font-size: 24px;
+    padding: 1vh;
+}
+
+@media(max-width: 700px){
+    .container{
+        flex-direction: column;
+    }
+
+    button{
+        font-size: 12px;
+        width: 70%;
+        
+    }
+
+    button:hover{
+        background-color: #953c1b;
+        color: white;
+        border-radius: 10px;
+        height: 5vh;
+        width: 70%;
+        border: none;
+    }
+
+    #menu{
+        display: none;
+    }
+
+    #hamburger{
+        display: flex;
+    }
+
+    #hamburgerList{
+        flex-direction: column;
+        background-color: #333533;
+        position: absolute;
+        right: 0px;
+        top: 10vh;
+        font-size: x-large;
+        width: 100%;
+        line-height: 1.4;
+    }
+}

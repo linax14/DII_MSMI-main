@@ -1,0 +1,138 @@
+body {
+    background-color: #333533;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("https://moodle.esmad.ipp.pt/pluginfile.php/1/theme_academi/slide2image/1699435861/IMG_1935_1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(100%) brightness(30%);
+    z-index: -1;
+}
+
+/* navbar style */
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 75%;
+    width: 100%;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+#menu {
+    display: block;
+}
+
+#hamburger {
+    display: none;
+}
+
+#hamburgerList {
+    display: none;
+}
+
+a.navbar {
+    color: white;
+    text-decoration: none;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+
+a.navbar:hover {
+    color: #BA4E26
+}
+
+a.navbar:after {
+    color: white;
+    text-decoration: none;
+}
+
+#main {
+    display: flex;
+    padding: 19vw;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 10vh;
+}
+
+#esmad {
+    animation: bounce 2.5s infinite;
+}
+
+@keyframes bounce {
+    0% {
+        color: white;
+        opcacity: 100%
+    }
+
+    25% {
+        color: white;
+        opacity: 0%
+    }
+
+    50% {
+        color: #BA4E26;
+        opacity: 100%
+    }
+
+    75% {
+        color: #BA4E26;
+        opacity: 0%
+    }
+
+    100% {
+        color: white;
+        opacity: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    nav {
+        display: flex;
+        top: 20px;
+        width: 100%;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    #main {
+        display: flex;
+        padding: 19vw;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: x-small;
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 2vh;
+    bottom: 0;
+}
+
+a.icons {
+    color: #999795;
+    font-size: 24px;
+    padding: 1vh;
+}
+
+a.icons:after {
+    color: #999795;
+    font-size: 24px;
+    padding: 1vh;
+}

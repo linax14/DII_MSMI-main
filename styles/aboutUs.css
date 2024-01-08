@@ -1,0 +1,222 @@
+body{
+    background-color: #333533;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* navbar style */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #333533;
+    padding-top: 2vh;
+    border-bottom-style: solid;
+    border-width: 0.5px;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+
+}
+
+#menu{
+    display: block;
+}
+
+#hamburger{
+    display: none;
+}
+
+#hamburgerList{
+    display: none;
+}
+
+#logo{
+    width: 5vw;
+    height: 3vh;
+    margin-bottom: 3vh;
+}
+
+a.navbar{
+    color: white;
+    text-decoration: none;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+
+a.navbar:hover{
+    color: #BA4E26
+}
+
+a.navbar:after{
+    color: white;
+    text-decoration: none;
+}
+
+/* div */
+
+.row{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5vh;
+}
+
+.justify{
+    width: 80%;
+    padding: 2vw;
+}
+
+/* 1st div */
+#school{
+    height: 55vh;
+}
+
+#presentation{
+    background-image: url("../assets/arcos.svg");
+    background-size: 100%;
+    width: 100%;
+    text-align: center;
+
+    
+}
+
+#title{
+    margin-top: 20%;
+}
+
+#esmad{    
+    animation: bounce 2.5s infinite;
+    font-weight: bold;
+}
+
+@keyframes bounce {
+    0%{color: white; opcacity:100%}
+    25%{color: white; opacity:0%}
+    50%{color: #BA4E26; opacity: 100%}
+    75%{color: #BA4E26; opacity: 0%}
+    100%{color: white; opacity: 100%;}
+}
+
+/* 2nd div */
+
+#location{
+    background-color: white;
+    color: #333533;
+    width: 20%;
+    padding: 2vh;
+}
+
+#locIcon{
+    color: #BA4E26;
+    margin-right: 2%;
+    font-size: 30px;
+}
+
+/* 3rd div */
+#about{
+    padding: 2vw;
+}
+
+#intro{
+    background-color: white;
+    color: #333533;
+
+}
+
+#button{
+    text-align: center;
+    height: 5vh;
+    background-image: url("../assets/btn.avif");
+    background-position: 50% 50%;
+    width: 22%;
+    height: 100%;
+    opacity: 80%;
+    color: white;
+    text-decoration: none;
+}
+
+#button::after{
+    color: white;
+    text-decoration: none;
+}
+
+#button:hover{
+    opacity: 100%;
+}
+
+#CTA{
+    margin-top: 44%;
+    margin-bottom: 44%;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 2vh;
+    border-top-style: solid;
+    border-width: 0.5px;
+}
+
+a.icons{
+    color:#999795;
+    font-size: 24px;
+    padding: 1vh;
+}
+
+a.icons:after{
+    color:#999795;
+    font-size: 24px;
+    padding: 1vh;
+}
+
+@media (max-width:700px){
+
+    .row{
+        flex-direction: column;
+        margin-top: 0vh;
+    }
+
+    .justify{
+        width: 100%;
+        padding: 2px;
+    }
+
+    #presentation{
+        margin-bottom: 2vh;
+    }
+
+    #location{
+        width: 50%;
+        margin: auto;
+    }
+
+    #button{
+        width: 100%;
+        height: 15vh;
+    }
+
+    #CTA{
+        margin-top: 15%;
+    }
+
+    #menu{
+        display: none;
+    }
+
+    #hamburger{
+        display: flex;
+    }
+
+    #hamburgerList{
+        flex-direction: column;
+        background-color: #333533;
+        position: absolute;
+        right: 0px;
+        top: 10vh;
+        font-size: x-large;
+        width: 100%;
+        line-height: 1.4;
+    }
+}
